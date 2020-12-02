@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Path?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pn_main" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" onMouseReleased="#onMouseReleased" prefHeight="744.0" prefWidth="1191.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainGameFormController">
+   <children>
+      <ImageView fitHeight="802.0" fitWidth="1195.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="/background.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="pn_gameState" prefHeight="200.0" prefWidth="1186.0">
+         <children>
+            <ImageView fitHeight="59.0" fitWidth="54.0" layoutX="12.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/orangeSplit.png" />
+               </image>
+               <effect>
+                  <DropShadow color="#000000c3" height="8.86" radius="6.205" width="17.96" />
+               </effect>
+            </ImageView>
+            <Label fx:id="lbl_score" layoutX="69.0" layoutY="2.0" prefHeight="69.0" prefWidth="270.0" text="0" textFill="#ffce36">
+               <font>
+                  <Font name="Gang of Three" size="60.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#0000007c" height="5.82" radius="3.9299999999999997" width="11.9" />
+               </effect>
+            </Label>
+            <Label fx:id="lbl_highScore" layoutX="18.0" layoutY="43.0" prefHeight="69.0" prefWidth="285.0" text="Best: 100" textFill="#cd9d02">
+               <font>
+                  <Font name="Gang of Three" size="28.0" />
+               </font>
+               <effect>
+                  <DropShadow height="14.93" radius="6.205" width="11.89" />
+               </effect>
+            </Label>
+            <Label fx:id="lbl_time" layoutX="1071.0" layoutY="-2.0" prefHeight="69.0" prefWidth="122.0" text="01:00" textFill="#ffce36" visible="false">
+               <font>
+                  <Font name="Gang of Three" size="43.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="img_lives" fitHeight="80.0" fitWidth="125.0" layoutX="1061.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="/lives3.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="pn_gameOver" prefHeight="744.0" prefWidth="1188.0">
+         <children>
+            <ImageView fitHeight="783.0" fitWidth="1326.0" layoutX="2.0" layoutY="-26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/gameOver.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lbl_gameOverScore" layoutX="470.0" layoutY="440.0" prefHeight="69.0" prefWidth="508.0" text="Score: 0" textFill="#ffce36">
+               <font>
+                  <Font name="Gang of Three" size="60.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#0000007c" height="5.82" radius="3.9299999999999997" width="11.9" />
+               </effect>
+            </Label>
+            <Label fx:id="lbl_gameOverBestScore" layoutX="382.0" layoutY="493.0" prefHeight="69.0" prefWidth="639.0" text="High Score: 0" textFill="#ffce36">
+               <font>
+                  <Font name="Gang of Three" size="60.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#0000007c" height="5.82" radius="3.9299999999999997" width="11.9" />
+               </effect>
+            </Label>
+            <JFXButton fx:id="btn_mainmenu1" layoutX="449.0" layoutY="580.0" onAction="#onButtonAction" prefHeight="52.0" prefWidth="274.0" style="-fx-background-color: ffcc4d;" text="Return To Main Menu">
+               <font>
+                  <Font name="Gang of Three" size="22.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="pn_fruits" prefHeight="747.0" prefWidth="1196.0">
+         <children>
+         <Path fx:id="path" fill="#1f93ff00" stroke="ANTIQUEWHITE" strokeType="INSIDE" strokeWidth="7.0">
+               <effect>
+                  <Glow level="1.0" />
+               </effect>
+            </Path>
+            <JFXButton fx:id="btn_mainmenu" layoutX="11.0" layoutY="693.0" onAction="#onButtonAction" prefHeight="30.0" prefWidth="31.0" style="-fx-background-color: ffcc4d;" text="&lt;">
+               <font>
+                  <Font name="Arial Bold" size="22.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      
+   </children>
+</AnchorPane>
